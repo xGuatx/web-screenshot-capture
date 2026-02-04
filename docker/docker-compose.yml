@@ -1,0 +1,80 @@
+version: '3.8'
+
+services:
+  shoturl:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: shoturl-v3
+    restart: unless-stopped
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      # Server
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=false
+
+      # Security
+      - SECRET_KEY=${SECRET_KEY:-changez-cette-cle-en-production}
+      - ALLOW_LOCAL_URLS=false
+
+      # RAM Limits (optimise pour 4GB)
+      - MAX_CONCURRENT_BROWSERS=4
+      - MAX_CONCURRENT_SESSIONS=10
+      - MAX_MEMORY_MB=3500
+
+      # Timeouts
+      - BROWSER_TIMEOUT=20
+      - PAGE_LOAD_TIMEOUT=10
+      - SESSION_TIMEOUT=300
+      - CLEANUP_INTERVAL=30
+
+      # Logging
+      - LOG_LEVEL=DEBUG
+
+    volumes:
+      # Logs persistants
+      - ./logs:/app/logs
+
+      # Shared memory pour Playwright (important!)
+      - /dev/shm:/dev/shm
+
+    # Limites de ressources Docker (4GB max)
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+          cpus: '2'
+        reservations:
+          memory: 2G
+          cpus: '1'
+
+    # Security options pour Playwright
+    security_opt:
+      - seccomp:unconfined
+
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+    networks:
+      - shoturl-network
+
+    labels:
+      - "com.shoturl.version=3.0.0"
+      - "com.shoturl.description=Screenshot & Analysis Tool"
+
+networks:
+  shoturl-network:
+    driver: bridge
+
+volumes:
+  logs:
+    driver: local

@@ -1,0 +1,50 @@
+RAM_GB,CPU,Browsers,Prewarm,MAX_MEMORY_MB,Total_Time,Status,Category
+4,6,3,3,3500,24.36s,OK,Premium - Sweet spot 1:1 ratio
+4,6,3,2,3500,24.83s,OK,Premium - Minimal prewarm
+4,6,4,2,3500,22.02s,OK,Premium - Plus de browsers
+4,6,4,3,3500,21.75s,OK,Premium - Equilibre
+4,6,5,3,3500,21.99s,OK,Premium - Max browsers viable
+4,6,5,4,3500,22.05s,OK,Premium - 5 browsers ratio optimal
+4,6,2,2,3500,26.11s,OK,Premium - Conservatif
+4,5,3,3,3500,25.03s,OK,Premium 5CPU - Sweet spot
+4,5,4,3,3500,24.00s,OK,Premium 5CPU - Standard
+4,5,4,2,3500,22.79s,OK,Premium 5CPU - Minimal prewarm
+4,5,5,3,3500,23.25s,OK,Premium 5CPU - Max browsers
+4,4,3,3,3500,26.17s,OK,Premium 4CPU - Equilibre
+4,4,4,2,3500,29.09s,OK,Premium 4CPU - Standard
+4,4,4,3,3500,28.00s,OK,Premium 4CPU - Plus prewarm
+4,3,3,2,3500,34.31s,OK,Premium 3CPU - Sweet spot
+4,3,3,3,3500,30.49s,OK,Premium 3CPU - Ratio 1:1
+3,6,3,3,2600,21.35s,OK,Equilibre - 3GB sweet spot
+3,6,3,2,2600,23.14s,OK,Equilibre - 3GB minimal
+3,6,4,2,2600,23.23s,OK,Equilibre - 3GB 4 browsers (risque)
+3,6,2,2,2600,24.48s,OK,Equilibre - 3GB conservatif
+3,5,3,3,2600,23.38s,OK,Equilibre 5CPU
+3,5,3,2,2600,24.67s,OK,Equilibre 5CPU minimal
+3,4,3,2,2600,27.83s,OK,Equilibre 4CPU - Optimal
+3,4,3,3,2600,25.74s,OK,Equilibre 4CPU - Ratio 1:1
+3,4,2,2,2600,26.76s,OK,Equilibre 4CPU - Securise
+3,3,3,2,2600,33.29s,OK,Equilibre 3CPU
+3,3,2,2,2600,32.04s,OK,Equilibre 3CPU conservatif
+2,6,2,2,1700,26.35s,OK,Budget - 2GB max CPU
+2,6,2,1,1700,26.45s,OK,Budget - 2GB 6CPU minimal
+2,6,3,2,1700,24.88s,OK,Budget - 2GB 3 browsers (limite)
+2,5,2,2,1700,26.49s,OK,Budget 5CPU
+2,5,2,1,1700,28.99s,OK,Budget 5CPU minimal
+2,4,2,2,1700,28.91s,OK,Budget 4CPU - Equilibre
+2,4,2,1,1700,30.26s,OK,Budget 4CPU - Minimal
+2,4,3,2,1700,29.43s,OK,Budget 4CPU - 3 browsers (risque)
+2,3,2,2,1700,34.95s,OK,Budget 3CPU
+2,3,2,1,1700,35.53s,OK,Budget 3CPU minimal
+2,2,2,2,1700,46.25s,OK,Budget 2CPU - Baseline optimise
+2,2,2,1,1700,44.59s,OK,Budget 2CPU - Ultra minimal
+1,6,2,1,1300,26.70s,OK,Economique - Test limite max CPU
+1,4,2,1,1300,29.77s,OK,Economique - Test limite 4CPU
+1,2,2,1,1300,46.24s,OK,Economique - Test limite minimal
+1,2,1,1,1300,51.56s,OK,Economique - Ultra economique
+4,6,6,3,3500,20.82s,OK,Curiosite - Max browsers 6CPU
+4,6,6,4,3500,21.76s,OK,Curiosite - 6 browsers ratio optimal
+4,6,1,1,3500,39.52s,OK,Curiosite - 1 browser 6CPU (waste)
+2,6,1,1,1700,41.19s,OK,Curiosite - 1 browser 2GB (minimal)
+4,1,1,1,3500,72.45s,OK,Curiosite - 1 CPU test
+4,2,2,1,3500,43.63s,OK,Curiosite - 2 CPU avec 4GB
